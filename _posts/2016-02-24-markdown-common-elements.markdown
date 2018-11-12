@@ -8,7 +8,7 @@ tag:
 - markdown
 - elements
 star: true
-category: blog
+category: blockchain
 author: johndoe
 description: Markdown summary with different options
 ---
