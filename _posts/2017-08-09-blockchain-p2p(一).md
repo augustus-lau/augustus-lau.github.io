@@ -27,9 +27,8 @@ externalLink: false
 
        例如，当前节点A 要与集群中节点B进行交互，那么A首先要从自己的公钥库中找到B节点的的公开秘钥(B的公开秘钥谁都可以获取)。然后对要传输的明文信息用B的公钥来加密，然后传输给B 节点。 而B节点则采用自己的私钥(私钥只有自己拥有)解密出数据。流程图如下：
 
-
-
-![]({{ site.url }}/assets/images/cipher/cipher1.png "")
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher1.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 
 ---
@@ -45,8 +44,8 @@ externalLink: false
 
 
 
-![]({{ site.url }}/assets/images/cipher/cipher2.png "")
-
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher2.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 ---
 
@@ -62,8 +61,8 @@ externalLink: false
 
 
 
-![]({{ site.url }}/assets/images/cipher/cipher3.png "")
-
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher3.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 ---
 
@@ -80,8 +79,8 @@ externalLink: false
 
 
 
-![]({{ site.url }}/assets/images/cipher/cipher4.png "")
-
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher4.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 
 ---
@@ -100,8 +99,8 @@ externalLink: false
 
 
 
-![]({{ site.url }}/assets/images/cipher/cipher5.png "")
-
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher5.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 ## (三)、[问题]对于大数据传输的性能问题
 
@@ -151,8 +150,8 @@ byte[] sign = signature.sign();//得到签名
 
 
 
-![]({{ site.url }}/assets/images/cipher/cipher6.png "")
-
+<img class="image" src="{{ site.url }}/assets/images/cipher/cipher6.png" alt="">
+<figcaption class="caption">augustus</figcaption>
 
 ---
 
