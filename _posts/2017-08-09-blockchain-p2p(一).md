@@ -29,7 +29,7 @@ externalLink: false
 
 
 
-![image.png | left | 791x359]({{ site.url }}/assets/images/cipher/cipher1.png "")
+![]({{ site.url }}/assets/images/cipher/cipher1.png "")
 
 
 ---
@@ -45,7 +45,7 @@ externalLink: false
 
 
 
-![image.png | left | 717x279]({{ site.url }}/assets/images/cipher/cipher2.png "")
+![]({{ site.url }}/assets/images/cipher/cipher2.png "")
 
 
 ---
@@ -62,7 +62,7 @@ externalLink: false
 
 
 
-![image.png | left | 827x182]({{ site.url }}/assets/images/cipher/cipher3.png "")
+![]({{ site.url }}/assets/images/cipher/cipher3.png "")
 
 
 ---
@@ -80,7 +80,7 @@ externalLink: false
 
 
 
-![image.png | left | 827x220]({{ site.url }}/assets/images/cipher/cipher4.png "")
+![]({{ site.url }}/assets/images/cipher/cipher4.png "")
 
 
 
@@ -100,7 +100,7 @@ externalLink: false
 
 
 
-![image.png | left | 827x195]({{ site.url }}/assets/images/cipher/cipher5.png "")
+![]({{ site.url }}/assets/images/cipher/cipher5.png "")
 
 
 ## (三)、[问题]对于大数据传输的性能问题
@@ -151,7 +151,7 @@ byte[] sign = signature.sign();//得到签名
 
 
 
-![image.png | left | 827x227]({{ site.url }}/assets/images/cipher/cipher6.png "")
+![]({{ site.url }}/assets/images/cipher/cipher6.png "")
 
 
 ---
