@@ -1,5 +1,5 @@
 ---
-title: "密码学之椭圆曲线(四)"
+title: "密码学之以太坊椭圆曲线(四)"
 layout: post
 date: 2018-09-10 22:10
 tag:  
@@ -14,11 +14,16 @@ externalLink: false
 ---
 
 ## 一、概念
-__ECC__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：Elliptic Curves Cryptography，椭圆曲线密码编码学。是一种根据椭圆上点倍积生成 公钥、私钥的算法。</span></span>
 
-__ECDSA__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：用于数字签名，是ECC与DSA的结合，整个签名过程与DSA类似，所不一样的是签名中采取的算法为ECC，最后签名出来的值也是分为r,s。</span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)"><strong>主要用于身份认证和签名阶段</strong></span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">。</span></span>
-__ECDH__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：也是基于ECC算法的霍夫曼树秘钥，通过ECDH，双方可以在不共享任何秘密的前提下协商出一个共享秘密。</span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)"><strong>主要用于握手磋商阶段。</strong></span></span>
+__ECC__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：Elliptic Curves Cryptography，椭圆曲线密码编码学。是一种根据椭圆上点倍积生成 公钥、私钥的算法。用于生成公私秘钥。</span></span>
 
+__ECDSA__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：用于数字签名,是一种数字签名算法。一种有效的数字签名使接收者有理由相信消息是由已知的发送者创建的，从而发送者不能否认已经发送了消息(身份验证和不可否认)，并且消息在运输过程中没有改变。ECDSA签名算法是ECC与DSA的结合，整个签名过程与DSA类似，所不一样的是签名中采取的算法为ECC，最后签名出来的值也是分为r,s。</span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)"><strong>主要用于身份认证和签名阶段</strong></span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">。</span></span>
+
+__ECDH__<span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)">：也是基于ECC算法的霍夫曼树秘钥，通过ECDH，双方可以在不共享任何秘密的前提下协商出一个共享秘密，并且是这种共享秘钥是为当前的通信暂时性的随机生成的，通信一旦中断秘钥就消失。</span></span><span data-type="color" style="color:rgb(79, 79, 79)"><span data-type="background" style="background-color:rgb(255, 255, 255)"><strong>主要用于握手磋商阶段。</strong></span></span>
+
+__ECIES：__是一种集成加密方案,也可称为一种混合加密方案，它提供了对所选择的明文和选择的密码文本攻击的语义安全性。ECIES可以使用不同类型的函数：秘钥协商函数(KA)，秘钥推导函数(KDF)，对称加密方案(ENC)，哈希函数(HASH), H-MAC函数(MAC)。
+
+所以，__ECC__是椭圆加密算法，主要讲述了按照公私钥怎么在椭圆上产生，并且不可逆。__ECDSA__则主要是采用ECC算法怎么来做签名，__ECDH__则是采用ECC算法怎么生成对称秘钥。以上三者都是对ECC加密算法的应用。而现实场景中，我们往往会采用混合加密(对称加密，非对称加密结合使用，签名技术等一起使用)。__ECIES__就是底层利用ECC算法提供的一套集成(混合)加密方案。其中包括了非对称加密，对称加密和签名的功能。
 
 
 ## 二、ECC算法
@@ -195,3 +200,8 @@ Q = ka * KB = ka \* kb \* G = ka \* G \* kb = KA \* kb = kb \* KA = Q'*
 
 [ECDH交互过程WIKI](https://en.wikipedia.org/wiki/Alice_and_Bob)
 
+[加密算法区分](https://crypto.stackexchange.com/questions/12823/ecdsa-vs-ecies-vs-ecdh)
+
+[ECIES集成方案介绍](https://pdfs.semanticscholar.org/9f5e/ec8cb6a8883498157e8e27723da52ae4c752.pdf)
+
+[ECIES在线演示](https://asecuritysite.com/encryption/ecc3)
