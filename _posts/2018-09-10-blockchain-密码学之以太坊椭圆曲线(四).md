@@ -189,6 +189,28 @@ Q = ka * KB = ka \* kb \* G = ka \* G \* kb = KA \* kb = kb \* KA = Q'*
 ---
 
 
+## 三、ECDSA 签名
+
+ecdsa签名算法和其他DSA、RSA基本相似，都是采用私钥签名，公钥验证。只不过算法体系采用的是ECC的算法。ECDSA的签名原理如下：
+
+设置私钥、公钥分别是k、K 。即K = kG。其中G = (x,y)坐标。
+
+__签名过程：__
+生成随机数R, 计算出RG.
+根据随机数R,消息M的HASH值H,以及私钥k, 计算出签名S = (H+kx)/R.
+将消息M,RG,S发送给接收方。
+
+__签名验证过程：__
+接收到消息M, RG,S
+根据消息计算出HASH值H
+根据发送方的公钥K,计算 H<span data-type="color" style="color:rgb(61, 70, 77)">G/S + xK/S,  将计算的结果与 RG比较。如果相等则验证成功。</span>
+
+__推论：__
+H<span data-type="color" style="color:rgb(61, 70, 77)">G/S + xK/S = HG/S + x(kG)/S = (H+xk)/GS = RG</span>
+
+
+---
+
 
 <em style="font-size: 12px;">参考连接:</em>
 
